@@ -1,39 +1,42 @@
 class Askkaya < Formula
-  desc "AI-powered client support CLI for OpenClaw setups"
+  desc "AskKaya - Full-stack client support platform CLI"
   homepage "https://github.com/kayacancode/askkaya"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.8/askkaya-darwin-arm64"
-      sha256 "4dac5fb9de506ab2347f4d0780e6c725c075db30f44c0542d238407bc0e45ef3"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.9/askkaya-darwin-arm64"
+      sha256 "88f739dd19b31e991f3dd0a3bce43f7b41cb951932edb8f362ce97e6e673357d"
     else
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.8/askkaya-darwin-amd64"
-      sha256 "e14db93e03c18786cc17001ca6dc5e4c66ad7eb6585e4c8648bc3f3cccd369d0"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.9/askkaya-darwin-amd64"
+      sha256 "8ee1a584ffc9bff03cf8be5aa0673d11270314ed19aa0b18c60bd5bc9cc0910c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.8/askkaya-linux-arm64"
-      sha256 "bbcd2bcb90b6bf824b2eded2fce7521b443263bc7bd8745850af89251257b228"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.9/askkaya-linux-arm64"
+      sha256 "2f73490758761533f666796d1db555d1615fe4625fd351dbaa57cf1cab4baddf"
     else
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.8/askkaya-linux-amd64"
-      sha256 "3649cac99956008a87a70e1e5bd6a506d9475abef55156f70bdd506a6cdffef8"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.9/askkaya-linux-amd64"
+      sha256 "29ca7631eeef1f149ce0fde41686daf59bd18ce9ad90d04fe219cc09d5c48f4d"
     end
   end
 
   def install
-    binary_name = "askkaya-darwin-arm64"
-    if OS.mac? && Hardware::CPU.intel?
-      binary_name = "askkaya-darwin-amd64"
-    elsif OS.linux? && Hardware::CPU.arm?
-      binary_name = "askkaya-linux-arm64"
+    if OS.mac?
+      if Hardware::CPU.arm?
+        bin.install "askkaya-darwin-arm64" => "askkaya"
+      else
+        bin.install "askkaya-darwin-amd64" => "askkaya"
+      end
     elsif OS.linux?
-      binary_name = "askkaya-linux-amd64"
+      if Hardware::CPU.arm?
+        bin.install "askkaya-linux-arm64" => "askkaya"
+      else
+        bin.install "askkaya-linux-amd64" => "askkaya"
+      end
     end
-    
-    bin.install Dir["*"].first => "askkaya"
   end
 
   test do
