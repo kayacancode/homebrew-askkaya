@@ -1,8 +1,7 @@
 class Askkaya < Formula
-  desc "AskKaya - AI-powered client support platform CLI"
+  desc "AskKaya - Full-stack client support platform CLI"
   homepage "https://github.com/kayacancode/askkaya"
   version "0.1.5"
-  license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
@@ -31,7 +30,7 @@ class Askkaya < Formula
       else
         bin.install "askkaya-darwin-amd64" => "askkaya"
       end
-    else
+    elsif OS.linux?
       if Hardware::CPU.arm?
         bin.install "askkaya-linux-arm64" => "askkaya"
       else
@@ -41,6 +40,6 @@ class Askkaya < Formula
   end
 
   test do
-    assert_match "askkaya", shell_output("#{bin}/askkaya --help")
+    system "#{bin}/askkaya", "--version"
   end
 end
