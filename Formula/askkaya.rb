@@ -1,25 +1,25 @@
 class Askkaya < Formula
   desc "AskKaya - Full-stack client support platform CLI"
   homepage "https://github.com/kayacancode/askkaya"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.6/askkaya-darwin-arm64"
-      sha256 "efa9554b2a18b0af306edfbeba89eb49ed70aaf5f27de39e87d4cd6869d5dd67"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.7/askkaya-darwin-arm64"
+      sha256 "30d6e41c2ed03858d69084821b45b248915ae3bf58a8ed7d712e3414bf40e557"
     else
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.6/askkaya-darwin-amd64"
-      sha256 "b2d2c882d9add7865811029079044069dfeecb0cc35705605fb98c9bb97b5cef"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.7/askkaya-darwin-amd64"
+      sha256 "cf6c30033ccfe0d8a108328dd2bd17a853fdbbfd1379ae4f6111494d98650c15"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.6/askkaya-linux-arm64"
-      sha256 "b2e1159f9732fabe37c27eee8a8078a9cf0e2ab4589eb7258e8da47ad5a72109"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.7/askkaya-linux-arm64"
+      sha256 "bb526d1773ebcc0be8f78019d53dc84e47b6d3be36a1b2f63d5bcbcc9c7b05e6"
     else
-      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.6/askkaya-linux-amd64"
-      sha256 "983de9b015ea901775ec31b3b07203208cc3ec4d052cda0549538922c271d4ab"
+      url "https://github.com/kayacancode/askkaya/releases/download/v0.1.7/askkaya-linux-amd64"
+      sha256 "5694ab57337c0d75aa6742cd6e04c47824ddce26a92b490dcb0357c66befc6b7"
     end
   end
 
