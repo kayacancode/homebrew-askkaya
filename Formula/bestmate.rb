@@ -1,15 +1,15 @@
 class Bestmate < Formula
   desc "Bestmate - Your AI knowledge twin CLI"
   homepage "https://github.com/kayacancode/askkaya"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.6.0/bestmate-darwin-arm64"
-      sha256 "853eaaabee3543aa7bd5113c42ffc740856895d2c0d71cae68bb8279061b94eb"
+      url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.6.1/bestmate-darwin-arm64"
+      sha256 "5e53243ad8ddc515521f6fdf056ae14b2756098b9c54d7ae97c1fb7b1b1026e1"
     else
-      url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.6.0/bestmate-darwin-amd64"
-      sha256 "21ad9f39d59d3ff67134bcf9fc79cf52b65e35a70ec53add9c0da2abd0c4c5fc"
+      url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.6.1/bestmate-darwin-amd64"
+      sha256 "364281b46eda14a4597c6bbf7e55f4e00c794992cbe7bf254f126337ddd33493"
     end
   end
 
