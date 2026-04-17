@@ -6,10 +6,10 @@ class Bestmate < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.12.1/bestmate-darwin-arm64"
-      sha256 "2d0fc7e09a10a142d07a3e1ddf356507a916aedd12a2700d551be84e0d6aa980"
+      sha256 "3eef2f20ca1ee434b1ad8c0d1db15b065a9636635c6e60e6a012c4ef805b3110"
     else
       url "https://github.com/kayacancode/homebrew-askkaya/releases/download/v0.12.1/bestmate-darwin-amd64"
-      sha256 "fa82ffd4855f91aa50534732f88d0e54592c29625825063fed0d0aa096259581"
+      sha256 "58e248475a9a258591d685e0946bdeb012d7cb6ee8c8a4271b990c92cc734e71"
     end
   end
 
